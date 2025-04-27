@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!-- /htdocs/your_project_name/frontend/index.html -->
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +18,14 @@
     <header>
         <h1>MyShop</h1>
         <nav>
-            <a href="./">Home</a>
+            <a href="index.php">Home</a>
             <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
-            <a href="login.html">Login</a>
+            
+        <?php if (isset($_SESSION['user_id'])): ?>
+            <a href="../../backend/api/logout.php" style="color: red; text-decoration: none; font-weight: bold;">Logout (<?php echo $_SESSION['username']; ?>)</a></li>
+        <?php else: ?>
+            <li><a href="../../frontend/login.php" >Login</a>
+        <?php endif; ?>
         </nav>
     </header>
 
