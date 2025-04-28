@@ -19,12 +19,12 @@ session_start();
         <h1>MyShop</h1>
         <nav>
             <a href="index.php">Home</a>
-            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+            <a href="cart.php">Cart (<span id="cart-count">0</span>)</a>
             
         <?php if (isset($_SESSION['user_id'])): ?>
-            <a href="../../backend/api/logout.php" style="color: red; text-decoration: none; font-weight: bold;">Logout (<?php echo $_SESSION['username']; ?>)</a></li>
+            <a href="../backend/api/logout.php" style="color: red; text-decoration: none; font-weight: bold;">Logout (<?php echo $_SESSION['username']; ?>)</a>
         <?php else: ?>
-            <li><a href="../../frontend/login.php" >Login</a>
+            <a href="login.html" >Login</a>
         <?php endif; ?>
         </nav>
     </header>

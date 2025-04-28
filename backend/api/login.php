@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $user = mysqli_fetch_assoc($result);
 
         // 3. Verify password
-        if (PASSWORD_VERIFY($password, $user['password'])) {
+        if (password_verify($password, $user['password'])) {
             // ✅ Password is correct
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];

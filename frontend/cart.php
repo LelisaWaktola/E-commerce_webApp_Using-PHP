@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cart - MyShop</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+        /* Your cart CSS here */
+        #cart-table th {
+            background-color: #f4f4f4;
+            padding: 12px;
+            font-size: 18px;
+            border-bottom: 2px solid #ccc;
+            text-align: center;
+        }
+
+        .cart-row td {
+            padding: 10px;
+            text-align: center;
+            vertical-align: middle;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-image {
+            padding: 10px;
+            margin-right: 90px;
+            border-radius: 8px;
+            width: 50px;
+            height: auto;
+        }
+
+        .cart-total{
+          color: #4CAF50;
+          font-weight: bold;
+        }
+        .cart-price {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .cart-name{
+          color: #4CAF50;
+          font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
@@ -12,8 +51,6 @@
     <h1>MyShop</h1>
     <nav>
       <a href="index.php">Home</a>
-      <a href="cart.html">Cart</a>
-      <a href="login.html">Login</a>
     </nav>
   </header>
 
@@ -31,9 +68,10 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody id="cart-items">
-          <!-- Cart items will be loaded dynamically -->
-        </tbody>
+        <table id="cart-items">
+  
+
+        </table>
       </table>
 
       <div class="cart-total">
@@ -49,7 +87,6 @@
   <footer>
     <p>&copy; 2025 MyShop. All rights reserved.</p>
   </footer>
-
   <script src="js/cart.js"></script>
 </body>
 </html>
