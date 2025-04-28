@@ -6,43 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cart - MyShop</title>
   <link rel="stylesheet" href="css/style.css">
-  <style>
+    <style>
         /* Your cart CSS here */
-        #cart-table th {
-            background-color: #f4f4f4;
-            padding: 12px;
-            font-size: 18px;
-            border-bottom: 2px solid #ccc;
-            text-align: center;
-        }
+        #cart-table {
+    width: 100%;
+    border-collapse: collapse; /* Very important for neat tables */
+}
 
-        .cart-row td {
-            padding: 10px;
-            text-align: center;
-            vertical-align: middle;
-            border-bottom: 1px solid #ddd;
-        }
+#cart-table th {
+    background-color: #f4f4f4;
+    padding: 12px;
+    font-size: 18px;
+    border-bottom: 2px solid #ccc;
+    text-align: left; /* make header text left aligned */
+}
 
-        .cart-image {
-            padding: 10px;
-            margin-right: 90px;
-            border-radius: 8px;
-            width: 50px;
-            height: auto;
-        }
+.cart-row td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    /* Remove width:100% here */
+}
 
-        .cart-total{
-          color: #4CAF50;
-          font-weight: bold;
-        }
-        .cart-price {
-            color: #4CAF50;
-            font-weight: bold;
-        }
-        .cart-name{
-          color: #4CAF50;
-          font-weight: bold;
-        }
+.cart-name {
+    padding-left: 40px;
+    color: green;
+}
+
+.cart-image {
+    border-radius: 8px;
+    width: 50px;
+    height: auto;
+    margin-left: 0;     
+}
+
+.cart-price, .cart-total {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
     </style>
 </head>
 <body>
@@ -62,6 +63,7 @@
         <thead>
           <tr>
             <th>Product</th>
+            <th>Name</th>
             <th>Price</th>
             <th>Quantity</th>
             <th>Subtotal</th>
